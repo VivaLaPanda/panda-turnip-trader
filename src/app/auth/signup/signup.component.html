@@ -1,0 +1,55 @@
+<div id="signup-container" fxLayout="column">
+  <div fxFlex ></div>
+  <mat-card class="signup-card" fxFlex >
+    <mat-toolbar color="primary">
+      Join this Isle
+      <span fxFlex></span>
+      <a mat-icon-button routerLink="/login">
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+    </mat-toolbar>
+    <mat-card-content>
+      <form #formData='ngForm' (ngSubmit)="onSubmit(formData)" fxLayout="column">
+        <mat-form-field>
+          <input matInput
+                 type="email"
+                 placeholder="Email address"
+                 name="email"
+                 required>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 type="password"
+                 required
+                 placeholder="Password"
+                 name="password">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 type="text"
+                 required
+                 placeholder="Friend Code"
+                 name="friendcode">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 type="text"
+                 required
+                 placeholder="In Game Name"
+                 name="inGameName">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 type="number"
+                 required
+                 placeholder="Timezone Offset (eg. -08, +05)"
+                 name="timezone"
+                 pattern="[+-][0-9][0-9]">
+        </mat-form-field>
+
+        <button mat-button type="submit" [disabled]="!formData.valid" class="basic-btn">Create my account</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <div fxFlex ></div>
+</div>

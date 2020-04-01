@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pandaturniptrader": {
+      "hosting": {
+        "panda-turnip-trader": [
+          "pandaturniptrader"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pandaturniptrader-0"
+  }
+}

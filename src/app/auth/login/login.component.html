@@ -1,0 +1,13 @@
+<div id="login-container" fxLayout="column">
+  <div fxFlex ></div>
+  <mat-card class="login-card" fxFlex >
+    <mat-toolbar color="primary">Login to {{ appName }}</mat-toolbar>
+    <mat-card-content fxLayout="column">
+      <button mat-button (click)="loginGoogle()" id="google">Login With Google</button>
+      <button mat-button (click)="loginEmail()" id="email">Email</button>
+
+      <a mat-button routerLink="/signup" routerLinkActive="active" class="alc">No account? <strong>Create one here</strong></a>
+    </mat-card-content>
+  </mat-card>
+  <div fxFlex ></div>
+</div>
